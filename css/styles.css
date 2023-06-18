@@ -1114,13 +1114,13 @@ input[type="password"], textarea {
         width: 100%;
     }
     .left-content {
-      width: 100%;
+      width: 80%;
       left: 0;
       top: 0;
     }
     
     .right-content {
-      width: 100%;
+      width: 80%;
       right: 0;
       top: 0;
     }
