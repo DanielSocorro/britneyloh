@@ -4333,12 +4333,12 @@ a .link {
     border: none;
     border-radius: 50px;
     color: white;
-    font-size: 1.5rem;
+    font-size: 35px;
     box-shadow: 0px 0px 10px 0px #ff17d1;
     cursor: pointer;
-    top: 287px;
-    height: 63px;
-    width: 163px;
+    top: 322px;
+    height: 100px;
+    width: 310px;
   }
   
   .readMore_btn:hover {
@@ -4371,10 +4371,9 @@ a .link {
   }
   .onlyfanstitle {
     position: relative;
-    font-size: 40px;
+    font-size: 63px;
     color: #d0d1d1;
-    top: 260px;
-   
+    top: 284px;
   }
 
   .copyright {
