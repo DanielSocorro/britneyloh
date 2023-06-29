@@ -7,95 +7,6 @@
     --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
 }
 
-/* ------------------------------------------------------------------- 
- * ## colors
- * ------------------------------------------------------------------- */
-:root {
-    /* color-1(#11ABB0)
-     * color-2(#F06000)
-     */
-    --color-1: hsla(182, 82%, 38%, 1);
-    --color-2: hsla(262, 44%, 50%, 1);
-
-    /* theme color variations
-     */
-    --color-1-lighter: hsla(182, 82%, 58%, 1);
-    --color-1-light  : hsla(182, 82%, 48%, 1);
-    --color-1-dark   : hsla(182, 82%, 28%, 1);
-    --color-1-darker : hsla(182, 82%, 18%, 1);
-    --color-2-lighter: hsla(24, 100%, 67%, 1);
-    --color-2-light  : hsla(24, 100%, 57%, 1);
-    --color-2-dark   : hsla(24, 100%, 37%, 1);
-    --color-2-darker : hsla(24, 100%, 27%, 1);
-
-    /* feedback colors
-     * color-error(#ffd1d2), color-success(#c8e675), 
-     * color-info(#d7ecfb), color-notice(#fff099)
-     */
-    --color-error          : hsla(359, 100%, 91%, 1);
-    --color-success        : hsla(76, 69%, 68%, 1);
-    --color-info           : hsla(205, 82%, 91%, 1);
-    --color-notice         : hsla(51, 100%, 80%, 1);
-    --color-error-content  : hsla(359, 50%, 50%, 1);
-    --color-success-content: hsla(76, 29%, 28%, 1);
-    --color-info-content   : hsla(205, 32%, 31%, 1);
-    --color-notice-content : hsla(51, 30%, 30%, 1);
-
-    /* shades 
-     * generated using 
-     * Tint & Shade Generator 
-     * (https://maketintsandshades.com/)
-     */
-    --color-black  : #000000;
-    --color-gray-19: #0a0a0a;
-    --color-gray-18: #141414;
-    --color-gray-17: #1e1e1e;
-    --color-gray-16: #282828;
-    --color-gray-15: #323333;
-    --color-gray-14: #3b3d3d;
-    --color-gray-13: #454747;
-    --color-gray-12: #4f5151;
-    --color-gray-11: #595b5b;
-    --color-gray-10: #636565;
-    --color-gray-9 : #737474;
-    --color-gray-8 : #828484;
-    --color-gray-7 : #929393;
-    --color-gray-6 : #a1a3a3;
-    --color-gray-5 : #b1b2b2;
-    --color-gray-4 : #c1c1c1;
-    --color-gray-3 : #d0d1d1;
-    --color-gray-2 : #e0e0e0;
-    --color-gray-1 : #eff0f0;
-    --color-white  : #ffffff;
-
-    /* text
-     */
-    --color-text       : var(--color-gray-16);
-    --color-text-dark  : var(--color-black);
-    --color-text-light : var(--color-gray-7);
-    --color-placeholder: var(--color-gray-7);
-
-    /* buttons
-     */
-    --color-btn                   : var(--color-gray-3);
-    --color-btn-text              : var(--color-black);
-    --color-btn-hover             : var(--color-black);
-    --color-btn-hover-text        : var(--color-white);
-    --color-btn-primary           : var(--color-1);
-    --color-btn-primary-text      : var(--color-white);
-    --color-btn-primary-hover     : var(--color-2);
-    --color-btn-primary-hover-text: var(--color-white);
-    --color-btn-stroke            : var(--color-black);
-    --color-btn-stroke-text       : var(--color-black);
-    --color-btn-stroke-hover      : var(--color-black);
-    --color-btn-stroke-hover-text : var(--color-white);
-
-    /* others
-     */
-    --color-bg     : var(--color-gray-18);
-    --color-border : var(--color-gray-2);
-    --border-radius: 5px;
-}
 
 /* ------------------------------------------------------------------- 
  * ## vertical spacing and typescale
@@ -572,9 +483,7 @@ html {
     font-size: var(--base-size);
 }
 
-html, body {
-    height: 100%;
-}
+
 
 body {
     background: var(--color-bg);
@@ -821,13 +730,13 @@ input[type="button"].btn--primary:focus {
     background-color: var(--color-gray-18);
     width: 100%;
     height: 100vh;
-    min-height: calc(25.5 * var(--space));
     overflow: hidden;
     position: relative;
+    
 }
 
 .s-hero__bg {
-    display: block;
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
@@ -837,12 +746,11 @@ input[type="button"].btn--primary:focus {
     height: 100%;
     background-image: url(../images/background.png);
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
 }
 
 .s-hero__bg::before {
-    display: block;
+    display: flex;
     content: "";
     position: absolute;
     top: 0;
@@ -856,7 +764,7 @@ input[type="button"].btn--primary:focus {
 }
 
 .s-hero__bg::after {
-    display: block;
+    display: flex;
     content: "";
     position: absolute;
     top: 0;
@@ -878,7 +786,6 @@ input[type="button"].btn--primary:focus {
     -webkit-box-align: center;
     align-items: center;
     text-align: center;
-    padding-bottom: 12vh;
     position: relative;
 }
 
@@ -945,7 +852,7 @@ input[type="button"].btn--primary:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45%;
+  width: 40%;
   height: 0%;
   background-image: radial-gradient(
     ellipse 50% 35% at 50% 50%,
@@ -954,7 +861,7 @@ input[type="button"].btn--primary:focus {
   );
   transform: translate(-50%, -50%);
   letter-spacing: 2;
-  left: 50%;
+  left: 46%;
   top: 23%;
   font-family:inherit;
   text-transform: uppercase;
@@ -1170,16 +1077,18 @@ input[type="button"].btn--primary:focus {
   }
   
   .left-content {
+    display: flex;
     position: relative;
-    width: 60%;
-    left: -20%;
-    top: 30px;
+    width: 60rem;
+    left: -10rem;
+    top: 3rem;
   }
   .right-content {
     position: relative;
     width: 138%;
-    right: -120px;
+    right: -110px;
     top: -600px;
+    margin-right: 10px;
   }
   .onlyfanstitle {
     position: relative;
@@ -1191,14 +1100,8 @@ input[type="button"].btn--primary:focus {
 
   .copyright {
     position: absolute;
-    top:95.5%;
-    left: 95%;
+    top:94.5%;
+    left: 92%;
     width: 300px;
   }
 
-  @media screen and (max-width: 390px) {
-    .sign {
-      left: 25%;
-      top: -25%;
-    }
-}
