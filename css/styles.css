@@ -1196,15 +1196,9 @@ input[type="button"].btn--primary:focus {
     width: 300px;
   }
 
-  @media screen and (max-width: 768px) {
-    .left-content, .right-content {
-      width: 100%;
-      left: 0; 
-      top: 0; 
+  @media screen and (max-width: 390px) {
+    .sign {
+      left: 25%;
+      top: -25%;
     }
-    
-    .onlyfanstitle {
-      font-size: 2.5vw; 
-      top: 1em;
-    }
-  }
+}
